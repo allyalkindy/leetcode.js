@@ -6,7 +6,7 @@
 ## 1️⃣ Arrays & Hashing (7)
 
 - [✅] Two Sum
-- [ ] Contains Duplicate
+- [✅] Contains Duplicate
 - [ ] Group Anagrams
 - [ ] Top K Frequent Elements
 - [ ] Product of Array Except Self
