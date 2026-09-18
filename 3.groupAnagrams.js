@@ -2,7 +2,6 @@
 const groupAnagrams = (strs)=>{
       let seen = {} ;
       let anagrams = [] ;
-      let anagramsIndex = 0 ;
 
 
       for(let i = 0; i<strs.length; i++){
@@ -13,9 +12,8 @@ const groupAnagrams = (strs)=>{
             anagrams[seen[sorted]].push(strs[i])
         }else{
 
-        seen[sorted] = anagramsIndex ;
-        anagrams[anagramsIndex] = [strs[i]];
-        anagramsIndex ++ ;
+        seen[sorted] = anagrams.length ;
+        anagrams.push([strs[i]]);
         }
 
       }
