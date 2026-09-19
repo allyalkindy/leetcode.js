@@ -7,7 +7,7 @@
 
 - [✅] Two Sum
 - [✅] Contains Duplicate
-- [ ] Group Anagrams
+- [✅] Group Anagrams
 - [ ] Top K Frequent Elements
 - [ ] Product of Array Except Self
 - [ ] Valid Anagram  
