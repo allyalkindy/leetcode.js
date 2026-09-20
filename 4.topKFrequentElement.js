@@ -6,33 +6,34 @@ for(let i = 0 ; i<nums.length ; i++){
     elementsCounts[nums[i]] = (elementsCounts[nums[i]] || 0) + 1 ;
 }
 
-const keys = Object.keys(elementsCounts).map(Number) ;
-const values = Object.values(elementsCounts) ;
-
-let frequents = [] ; 
+const frequents = [] ;
+const buckets = [] ;
 
 
-for(let i = 0 ; i<k ; i++ ){
-    const freqValue = Math.max(...values) ;
-    const valueIndex = values.indexOf(freqValue)
-    values.splice(valueIndex,1) ;
 
-    const freqKey = keys.find(k => elementsCounts[k] === freqValue)
-    const keyIndex = keys.indexOf(freqKey) ;
+for(key in elementsCounts){
+   const frequency = elementsCounts[key] ;
 
-    frequents.push(freqKey) ;
-    keys.splice(keyIndex,1) ; 
+   if(!buckets[frequency]){
+    buckets[frequency] = [] ;
+   } 
+
+   buckets[frequency].push(Number(key)) ;
 
 }
 
 
+for(let i=buckets.length-1; i>=0 && frequents.length < k  ; i--){
 
-
-return frequents;
-
-
+    if(buckets[i]){
+    frequents.push(...buckets[i]) ;
+    }
 
 }
 
-console.log(topKFrequent([1,1,1,2,2,3],2))
-console.log(topKFrequent([1,2,1,2,1,2,3,1,3,2],2))
+ return frequents.slice(0,k);
+
+}
+
+//console.log(topKFrequent([1,1,1,2,2,3],2))
+console.log(topKFrequent([1,2,1,2,1,2,3,1,3,2,4,5,5],3))

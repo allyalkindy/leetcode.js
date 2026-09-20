@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "pretty-error": "^4.0.0"
+  }
+}
