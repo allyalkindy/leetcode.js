@@ -13,3 +13,8 @@ const isAnagram = (s,t)=>{
 
 
 console.log(isAnagram("yes","sy")) ;
+
+
+
+
+

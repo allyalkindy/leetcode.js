@@ -11,7 +11,7 @@
 - [✅] Top K Frequent Elements
 - [✅] Product of Array Except Self
 - [✅] Valid Anagram  
-- [ ] Longest Consecutive Sequence
+- [✅] Longest Consecutive Sequence
 
 ---
 
