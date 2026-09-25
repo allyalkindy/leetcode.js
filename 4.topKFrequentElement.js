@@ -17,11 +17,9 @@ for(key in elementsCounts){
    if(!buckets[frequency]){
     buckets[frequency] = [] ;
    } 
-
    buckets[frequency].push(Number(key)) ;
 
 }
-
 
 for(let i=buckets.length-1; i>=0 && frequents.length < k  ; i--){
 
@@ -35,5 +33,4 @@ for(let i=buckets.length-1; i>=0 && frequents.length < k  ; i--){
 
 }
 
-//console.log(topKFrequent([1,1,1,2,2,3],2))
 console.log(topKFrequent([1,2,1,2,1,2,3,1,3,2,4,5,5],3))
